@@ -22,9 +22,9 @@ for i,group in enumerate(groups,1):
   z.write(R/'NOTICE.txt','来源与许可说明.txt')
  links.append(f'<a class="btn" href="downloads/{name}" download>512 清晰包 {i} · {group[0].stem}–{group[-1].stem} ↓</a>')
 p=D/'index.html';s=p.read_text();s=s.replace('https://github.com/diwer/ai-biaoqingbao/raw/refs/heads/master/downloads/dafeiyu-240.zip','downloads/dafeiyu-240.zip').replace('https://github.com/diwer/ai-biaoqingbao/raw/refs/heads/master/downloads/dafeiyu-512.zip','#downloads')
-s=s.replace('<footer>','<section id="downloads"><span class="eyebrow">DOWNLOAD THE COLLECTION</span><h2>把这份心情，带回聊天里。</h2><p>轻量包包含全部100个GIF；512清晰版分包提供，每一包都是独立ZIP，解压后放在一起即可。</p><div class="hero-actions" style="flex-wrap:wrap"><a class="btn" href="downloads/dafeiyu-240.zip" download>100个手机轻量包 ↓</a>'+''.join(links)+'</div><p><a href="https://github.com/diwer/ai-biaoqingbao">GitHub 代码与完整下载</a> · Gitee 镜像尚未建立</p></section><footer>',1)
-s=s.replace('<a href="https://github.com/diwer/ai-biaoqingbao" target="_blank" rel="noopener">GitHub ↗</a>', '<a href="https://gitee.com/wmmhdhy" target="_blank" rel="noopener">Gitee 主页 ↗</a><a href="https://github.com/diwer/ai-biaoqingbao" target="_blank" rel="noopener">GitHub ↗</a>')
-s=s.replace('Gitee 镜像尚未建立', '<a href="https://gitee.com/wmmhdhy">Gitee 主页（仓库待建立）</a>')
+s=s.replace('<footer>','<section id="downloads"><span class="eyebrow">DOWNLOAD THE COLLECTION</span><h2>把这份心情，带回聊天里。</h2><p>轻量包包含全部100个GIF；512清晰版分包提供，每一包都是独立ZIP，解压后放在一起即可。</p><div class="hero-actions" style="flex-wrap:wrap"><a class="btn" href="downloads/dafeiyu-240.zip" download>100个手机轻量包 ↓</a>'+''.join(links)+'</div><p><a href="https://github.com/diwer/ai-biaoqingbao">GitHub 代码与完整下载</a> · Gitee 国内镜像</p></section><footer>',1)
+s=s.replace('<a href="https://github.com/diwer/ai-biaoqingbao" target="_blank" rel="noopener">GitHub ↗</a>', '<a href="https://gitee.com/wmmhdhy/ai-biaoqingbao" target="_blank" rel="noopener">Gitee ↗</a><a href="https://github.com/diwer/ai-biaoqingbao" target="_blank" rel="noopener">GitHub ↗</a>')
+s=s.replace('Gitee 国内镜像', '<a href="https://gitee.com/wmmhdhy/ai-biaoqingbao">Gitee 国内镜像</a>')
 p.write_text(s)
 assets=list(f for f in D.rglob('*') if f.is_file());assert len(assets)<=1000;assert all(f.stat().st_size<=25*1024*1024 for f in assets)
 with zipfile.ZipFile(R/'output/edgeone-static-upload.zip','w',zipfile.ZIP_DEFLATED) as z:
