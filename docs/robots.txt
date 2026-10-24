@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diwer.github.io/ai-biaoqingbao/sitemap.xml

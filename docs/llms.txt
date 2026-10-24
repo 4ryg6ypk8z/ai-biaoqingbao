@@ -1,0 +1,9 @@
+# 大肥鱼表情包
+
+100个中文GIF，持续更新。非商业二创，不是官方作品。
+
+- [宣传页](https://diwer.github.io/ai-biaoqingbao/)
+- [表情目录](https://diwer.github.io/ai-biaoqingbao/catalog.json)
+- [来源与许可](https://github.com/diwer/ai-biaoqingbao/blob/master/NOTICE.txt)
+
+不保证任何搜索引擎或AI检索系统收录。
