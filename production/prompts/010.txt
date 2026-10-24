@@ -1,0 +1,11 @@
+Use case: illustration-story
+Asset type: static no-text chat sticker concept for item 010 抱抱
+Primary request: depict a completed, close, comforting hug rather than an invitation to hug
+Input images: Image 1 is the sole identity reference for the main character; ignore its text and food prop
+Scene/backdrop: clean white background
+Subject: the exact blue-haired whale-maid turns three-quarter and wraps both arms around a very simple anonymous pale-gray shoulder-and-head silhouette cropped at the frame edge; her eyes are softly closed and cheek rests against it. The whale-maid is the clear main character and occupies most of the image; the secondary silhouette has no details or distinctive identity.
+Style/medium: polished soft-shaded chibi illustration consistent with the identity reference
+Composition/framing: medium view, strong closed embrace silhouette, both of the main character's hands visibly wrapping around the shoulder, face and whale tail unobscured
+Lighting/mood: warm and reassuring
+Constraints: preserve the main character's original face, body proportions, blue eyes, blue gradient long hair, single curved ahoge, fin-shaped side locks, blue bows, white frilled maid headdress, blue-and-white maid outfit, whale-emblem apron, and blue whale tail; change only pose/expression
+Avoid: text, speech bubbles, duplicate blue-haired character, detailed second person, changed identity, palette, clothes, body, watermark
