@@ -1,8 +1,10 @@
-Use case: identity-preserve. Asset: ONE emotion's animation sprite sheet for a Chinese personal chat GIF.
-Use the provided reference as exact character identity AND drawing style. Do not reproduce its caption.
-OUTPUT one square bitmap: precise borderless TWO columns by TWO rows, FOUR equal SQUARE cells. Reading order top-left, top-right, bottom-left, bottom-right. Exactly ONE same character per cell. Pure white background; no gutters, frame borders, captions, lettering or watermark anywhere. Every cell has the SAME scale, framing, centered position and baseline. Every cell must fit all hair, tail, hands and props inside its own boundaries with 6 percent outer margin; bottom 16 percent of every cell blank for a caption added later. Waist-up chibi composition with large expressive face; no abrupt camera zoom or mirror flips.
-EXACT CHARACTER: round cute very large chibi head, tiny body, rich dark-blue to sky-blue gradient flowing long hair, BLUE eyes when open, fin-shaped side locks, small blue side bows, white frilled maid headdress, one thin naturally rooted curved blue ahoge above the headdress, navy-and-white frilled maid dress, white apron with blue whale emblem, one broad blue whale tail at VIEWER RIGHT in ALL four frames. No sheep features, horns, dragon tail, scales, extra characters or limbs.
-STYLE: match the reference's polished rounded anime chibi, clean dark blue outlines, soft cel shading, blue hair shine and pink cheeks. Preserve facial proportions, hair details and costume across all four cells. Clean coherent hand anatomy. Simple small controlled animation motion, not four disconnected illustrations. All four frames communicate the SAME chosen reaction.
-EMOTION AND FOUR-FRAME MOTION: Sleepy relaxed face, hugs a small plain pillow, beside her a simple green battery icon fills from low to high across four frames, no words or electrical cables.
-Cycle phases: frame1 clear recognizable starting expression, frame2 begins gesture, frame3 peak gesture, frame4 gently returns toward starting pose. Small differences, stable identity and framing. No new random props; only the specified prop may appear. No scenery or other person. Tail never changes side. Leave enough white margin so no asset is cut by grid lines.
-TEXT: none. The Chinese caption will be added mechanically after slicing. No letters or writing on any prop.
+Use case: illustration-story
+Asset type: static sticker concept preview
+Input images: supplied original character reference as identity source; do not copy its pose.
+Primary request: show that she is resting and recharging.
+Scene/backdrop: plain white with one soft pale-blue cushion and a small folded blanket; no text or watermark.
+Subject: exact whale-maid with blue gradient long hair, blue eyes, one curved ahoge, fin-shaped side locks, blue bows, white frilled maid headdress, navy-and-white maid outfit, whale-logo apron, same face/proportions, and blue whale tail. Preserve identity and colors.
+Composition/framing: curled comfortably on her side on the cushion, blanket draped over her lap, hands relaxed, whale tail tucked alongside her. Full silhouette visible with face unobstructed.
+Expression: peaceful closed eyes and a tiny content smile; this is actual rest, not just requesting a pause.
+Style/medium: polished 2D anime chibi sticker, soft simple forms, crisp edges.
+Avoid: phone, laptop, coffee, active gesture, extra characters, altered outfit or hair, text, watermark.

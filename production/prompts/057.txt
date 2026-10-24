@@ -1,8 +1,11 @@
-Use case: identity-preserve. Asset: ONE emotion's animation sprite sheet for a Chinese personal chat GIF.
-Use the provided reference as exact character identity AND drawing style. Do not reproduce its caption.
-OUTPUT one square bitmap: precise borderless TWO columns by TWO rows, FOUR equal SQUARE cells. Reading order top-left, top-right, bottom-left, bottom-right. Exactly ONE same character per cell. Pure white background; no gutters, frame borders, captions, lettering or watermark anywhere. Every cell has the SAME scale, framing, centered position and baseline. Every cell must fit all hair, tail, hands and props inside its own boundaries with 6 percent outer margin; bottom 16 percent of every cell blank for a caption added later. Waist-up chibi composition with large expressive face; no abrupt camera zoom or mirror flips.
-EXACT CHARACTER: round cute very large chibi head, tiny body, rich dark-blue to sky-blue gradient flowing long hair, BLUE eyes when open, fin-shaped side locks, small blue side bows, white frilled maid headdress, one thin naturally rooted curved blue ahoge above the headdress, navy-and-white frilled maid dress, white apron with blue whale emblem, one broad blue whale tail at VIEWER RIGHT in ALL four frames. No sheep features, horns, dragon tail, scales, extra characters or limbs.
-STYLE: match the reference's polished rounded anime chibi, clean dark blue outlines, soft cel shading, blue hair shine and pink cheeks. Preserve facial proportions, hair details and costume across all four cells. Clean coherent hand anatomy. Simple small controlled animation motion, not four disconnected illustrations. All four frames communicate the SAME chosen reaction.
-EMOTION AND FOUR-FRAME MOTION: Beaming loving blue eyes, both hands cradle one large pink heart at chest, gently pushes the heart toward viewer then hugs it back, coherent heart shape.
-Cycle phases: frame1 clear recognizable starting expression, frame2 begins gesture, frame3 peak gesture, frame4 gently returns toward starting pose. Small differences, stable identity and framing. No new random props; only the specified prop may appear. No scenery or other person. Tail never changes side. Leave enough white margin so no asset is cut by grid lines.
-TEXT: none. The Chinese caption will be added mechanically after slicing. No letters or writing on any prop.
+Use case: illustration-story
+Asset type: static, no-text chat sticker concept for item 057 直接表达喜爱与爱意
+Primary request: clearly and directly show warm affection without using a blowing-kiss gesture
+Input images: Image 1 is the sole character identity reference; ignore its text and food prop, preserve only the character identity
+Scene/backdrop: clean white background, isolated chibi sticker
+Subject: the exact blue-haired whale-maid faces the viewer upright and forms one clear small heart with both hands at chest height; she makes direct, tender eye contact with a warm closed-mouth smile, with a few tiny hearts around her shoulders
+Style/medium: polished soft-shaded chibi illustration consistent with the reference character
+Composition/framing: centered waist-up, hands and face fully visible, modest space around the heart accents
+Lighting/mood: warm, sincere and fond
+Constraints: preserve her original face, body proportions, blue eyes, blue gradient long hair, single curved ahoge, fin-shaped side locks, blue bows, white frilled maid headdress, blue-and-white maid outfit, whale-emblem apron, and blue whale tail; vary only pose and expression
+Avoid: text, pouting, hand at lips, flying-kiss action, broad hug, changed identity, palette, clothes, body, watermark

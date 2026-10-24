@@ -1,12 +1,12 @@
 from pathlib import Path
 import json,shutil,html,zipfile
-R=Path(__file__).resolve().parents[1]; S=R/'output/dafeiyu-100-v001';D=R/'docs';m=json.loads((S/'manifest.json').read_text()) if (S/'manifest.json').exists() else {'items':json.loads((D/'catalog.json').read_text())};items=m['items'];assert len(items)==100
-for e in items if (S/'manifest.json').exists() else []:
+R=Path(__file__).resolve().parents[1]; S=R/'output/dafeiyu-100-v001';D=R/'docs';corrected=(R/'production/published-v002/manifest.json').exists();m={'items':json.loads((D/'catalog.json').read_text())} if corrected else (json.loads((S/'manifest.json').read_text()) if (S/'manifest.json').exists() else {'items':json.loads((D/'catalog.json').read_text())});items=m['items'];assert len(items)==100
+for e in items if (S/'manifest.json').exists() and not corrected else []:
  assert (S/e['gif']).exists() and (S/e['small']).exists()
  shutil.copy2(S/e['small'],D/'media'/f'{e["id"]}.gif');shutil.copy2(S/e['gif'],R/'stickers/512'/f'{e["id"]}.gif')
-if (S/'manifest.json').exists(): shutil.copy2(S/'dafeiyu-personal-240.zip',R/'downloads/dafeiyu-240.zip')
-if (S/'manifest.json').exists(): shutil.copy2(S/'dafeiyu-personal-512.zip',R/'downloads/dafeiyu-512.zip')
-if (S/'来源与许可说明.txt').exists(): shutil.copy2(S/'来源与许可说明.txt',R/'NOTICE.txt')
+if (S/'manifest.json').exists() and not corrected: shutil.copy2(S/'dafeiyu-personal-240.zip',R/'downloads/dafeiyu-240.zip')
+if (S/'manifest.json').exists() and not corrected: shutil.copy2(S/'dafeiyu-personal-512.zip',R/'downloads/dafeiyu-512.zip')
+if (S/'来源与许可说明.txt').exists() and not corrected: shutil.copy2(S/'来源与许可说明.txt',R/'NOTICE.txt')
 public=[{k:e[k] for k in ['id','label','category','meaning']} for e in items];(D/'catalog.json').write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
 featured=['031','037','039','046','041','064','076','054','017','018','099','100'];order=sorted(items,key=lambda e:(0,featured.index(e['id'])) if e['id'] in featured else (1,int(e['id'])))
 url='https://diwer.github.io/ai-biaoqingbao/'
@@ -70,4 +70,13 @@ readme+='''## 下载与自用导入
 readme+='\n'.join(f'|{e["id"]}|[{e["label"]}](docs/media/{e["id"]}.gif)|{e["meaning"]}|{e["category"]}|' for e in items)
 readme+='\n\n## English summary\n\nDafeiyu Chinese reaction GIF collection: 100 captioned whale-maid reaction stickers, including daily replies, work moods, affection and greetings. Continuously maintained. Non-commercial fan-made AI-assisted artwork, not an official DeepSeek product. No commercial license is granted. See NOTICE for attribution and unresolved reference-image provenance.\n'
 (R/'README.md').write_text(readme)
+if corrected:
+ for target in [D/'index.html',R/'README.md',D/'llms.txt']:
+  s=target.read_text().replace('最近更新：2026-10-24','最近更新：2026-10-25').replace('VOL. 01','VOL. 02').replace('大肥鱼挥手欢迎你','大肥鱼欢迎你')
+  s=s.replace('持续更新中','v002 全套修订 · 持续更新')
+  s=s.replace('一百种小情绪，总有一张懂你。','一百种小情绪，全套焕新。<br>动作、神态与场景，表达更清楚。')
+  s=s.replace('当前已制作100个，','当前100个已全部替换为 v002 修订版，')
+  if target.name=='README.md':s=s.replace('**持续更新**。','**持续更新 · v002 全套修订（2026-10-25）**。',1)
+  target.write_text(s)
+ (D/'sitemap.xml').write_text((D/'sitemap.xml').read_text().replace('2026-10-24','2026-10-25'))
 print('Built README, 100 public GIFs in two sizes, landing page, catalog, metadata, sitemap, optional llms.txt')

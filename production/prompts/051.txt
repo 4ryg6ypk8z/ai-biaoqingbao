@@ -1,8 +1,10 @@
-Use case: identity-preserve. Asset: ONE emotion's animation sprite sheet for a Chinese personal chat GIF.
-Use the provided reference as exact character identity AND drawing style. Do not reproduce its caption.
-OUTPUT one square bitmap: precise borderless TWO columns by TWO rows, FOUR equal SQUARE cells. Reading order top-left, top-right, bottom-left, bottom-right. Exactly ONE same character per cell. Pure white background; no gutters, frame borders, captions, lettering or watermark anywhere. Every cell has the SAME scale, framing, centered position and baseline. Every cell must fit all hair, tail, hands and props inside its own boundaries with 6 percent outer margin; bottom 16 percent of every cell blank for a caption added later. Waist-up chibi composition with large expressive face; no abrupt camera zoom or mirror flips.
-EXACT CHARACTER: round cute very large chibi head, tiny body, rich dark-blue to sky-blue gradient flowing long hair, BLUE eyes when open, fin-shaped side locks, small blue side bows, white frilled maid headdress, one thin naturally rooted curved blue ahoge above the headdress, navy-and-white frilled maid dress, white apron with blue whale emblem, one broad blue whale tail at VIEWER RIGHT in ALL four frames. No sheep features, horns, dragon tail, scales, extra characters or limbs.
-STYLE: match the reference's polished rounded anime chibi, clean dark blue outlines, soft cel shading, blue hair shine and pink cheeks. Preserve facial proportions, hair details and costume across all four cells. Clean coherent hand anatomy. Simple small controlled animation motion, not four disconnected illustrations. All four frames communicate the SAME chosen reaction.
-EMOTION AND FOUR-FRAME MOTION: Arms folded tight at chest, brow raised in offended disbelief, tiny huffy pout, cheeks tint pink, head recoils slightly and tail flicks.
-Cycle phases: frame1 clear recognizable starting expression, frame2 begins gesture, frame3 peak gesture, frame4 gently returns toward starting pose. Small differences, stable identity and framing. No new random props; only the specified prop may appear. No scenery or other person. Tail never changes side. Leave enough white margin so no asset is cut by grid lines.
-TEXT: none. The Chinese caption will be added mechanically after slicing. No letters or writing on any prop.
+Use case: illustration-story
+Asset type: one square static sticker concept preview for a Chinese chat sticker set, item 051 表示受到了轻微冒犯
+Primary request: show a small, wounded “was that aimed at me?” reaction, clearly different from anger or disgust
+Input image: Image 1 is the only character identity reference; preserve the same character, do not copy its static pose
+Scene/backdrop: clean white background, isolated character
+Subject: chibi maid-whale character leans back a little; one hand touches her own chest as if asking “me?”, the other palm lifts in a tentative protest; one brow raised, eyes glance sideways, mouth slightly open and displeased, one tiny abstract prick/star just outside the shoulder
+Style/medium: polished soft-shaded chibi illustration matching the identity reference
+Composition/framing: medium full-body three-quarter view with open negative space in front of the character and clearly readable self-pointing gesture
+Constraints: keep face shape, body proportions, blue eyes, blue gradient long hair, single curved blue ahoge, fin-shaped side locks, blue bows, white frilled maid headdress, navy-and-white maid outfit, white apron with whale emblem, blue whale tail, and all their original colors. Change only pose and expression.
+Avoid: text, letters, watermark, other characters, angry steam or flames, tears, exaggerated shouting, disgusted nose-covering pose, hand fully obscuring the face
