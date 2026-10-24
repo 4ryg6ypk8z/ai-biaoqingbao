@@ -1,0 +1,10 @@
+Use case: illustration-story
+Asset type: static sticker concept preview
+Input images: supplied original character reference as identity source; do not copy its pose.
+Primary request: announce that the meal is ready.
+Scene/backdrop: plain white, simple steaming serving tray only; no text or watermark.
+Subject: exact whale-maid with blue gradient long hair, blue eyes, one curved ahoge, fin-shaped side locks, blue bows, white frilled maid headdress, navy-and-white maid outfit, whale-logo apron, same face/proportions, and blue whale tail. Preserve all identity features and colors.
+Composition/framing: full-body; she presents the tray outward at chest height with one hand and uses the other hand for a clear beckoning “come eat” gesture. Food is covered by a simple dome lid lifted slightly to reveal steam. Face unobstructed.
+Expression: warmly excited host, smiling toward viewer.
+Style/medium: polished 2D anime chibi sticker, clear silhouette, generous white space.
+Avoid: eating, hungry pleading, extra characters, changed identity, readable text, watermark.
