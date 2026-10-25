@@ -1,7 +1,9 @@
 """Build a dashboard-uploadable static site; keep every asset below Pages' 25 MiB limit."""
 from pathlib import Path
 import shutil,json,zipfile
-R=Path(__file__).resolve().parents[1];D=R/'output/edgeone-site';D.mkdir(parents=True,exist_ok=True)
+R=Path(__file__).resolve().parents[1];D=R/'output/edgeone-site'
+if D.exists():shutil.rmtree(D)
+D.mkdir(parents=True)
 
 for name in ['index.html','site.css','catalog.json','robots.txt','sitemap.xml','llms.txt','.nojekyll']:
  shutil.copy2(R/'docs'/name,D/name)
