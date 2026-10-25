@@ -1,5 +1,0 @@
-Character lock: use the selected 037 sticker only as the identity reference. Preserve the whale-maid's face and proportions, blue-gradient long hair, blue eyes, one curved ahoge, fin-shaped side locks, blue bows, white frilled headdress, navy-and-white maid outfit, whale-logo apron, blue whale tail, and original colors. Only pose, expression, and small meaning-related props may vary.
-
-Meaning: 麻了——被反复折腾到失去反应. Four-panel sequence: one blank notification bubble makes her glance at her phone; repeated identical bubbles stack and tense her shoulders; the bubbles shrink to three dots as her phone lowers and shoulders sag; the bubbles disappear while she becomes still and blank-faced. Preserve the visual change from slight attention to cumulative overload to no reaction. No words, letters, numerals, readable app UI, other characters, watermark, or background scene. The bubble shapes are abstract and small, never cover her face.
-
-Generation: built-in ImageGen, using previews/037-ma-le-preview-v001.png as the only input identity reference. Network images were research-only and were not supplied to ImageGen.
