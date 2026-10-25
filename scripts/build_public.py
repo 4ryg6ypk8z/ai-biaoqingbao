@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,shutil,html,zipfile,re
-R=Path(__file__).resolve().parents[1]; S=R/'output/dafeiyu-100-v001';D=R/'docs';release_version='v003' if (R/'production/published-v003/manifest.json').exists() else ('v002' if (R/'production/published-v002/manifest.json').exists() else 'v001');corrected=release_version!='v001';m={'items':json.loads((D/'catalog.json').read_text())} if corrected else (json.loads((S/'manifest.json').read_text()) if (S/'manifest.json').exists() else {'items':json.loads((D/'catalog.json').read_text())});items=m['items'];assert len(items)==100;release_name={'v003':'v003 动效舒缓优化','v002':'v002 全套修订','v001':'持续更新中'}[release_version];release_edition={'v003':'03','v002':'02','v001':'01'}[release_version]
+R=Path(__file__).resolve().parents[1]; S=R/'output/dafeiyu-100-v001';D=R/'docs';release_version='v004' if (R/'production/published-v004/manifest.json').exists() else ('v003' if (R/'production/published-v003/manifest.json').exists() else ('v002' if (R/'production/published-v002/manifest.json').exists() else 'v001'));corrected=release_version!='v001';m={'items':json.loads((D/'catalog.json').read_text())} if corrected else (json.loads((S/'manifest.json').read_text()) if (S/'manifest.json').exists() else {'items':json.loads((D/'catalog.json').read_text())});items=m['items'];assert len(items)==100;release_name={'v004':'v004 动效舒缓优化','v003':'v003 动效舒缓优化','v002':'v002 全套修订','v001':'持续更新中'}[release_version];release_edition={'v004':'04','v003':'03','v002':'02','v001':'01'}[release_version]
 for e in items if (S/'manifest.json').exists() and not corrected else []:
  assert (S/e['gif']).exists() and (S/e['small']).exists()
  shutil.copy2(S/e['small'],D/'media'/f'{e["id"]}.gif');shutil.copy2(S/e['gif'],R/'stickers/512'/f'{e["id"]}.gif')
@@ -83,6 +83,13 @@ if corrected:
    s=s.replace('当前提供100个带中文配字的循环GIF，提供240像素轻量版和512像素清晰版。','当前提供100个带中文配字的GIF表情：19个微动、81个静帧，含240像素轻量版和512像素清晰版。')
    s=s.replace('动作、神态与场景，表达更清楚。','19 个微动 · 81 个静帧，表达更舒服。')
    if target.name=='README.md':s=s.replace('当前100个已全部替换为 v003 版，','当前100个已全部替换为 v003 舒缓版（19个微动、81个静帧），')
+  if release_version=='v004':
+   s=s.replace('19 个微动 · 81 个静帧，表达更舒服。','100 个局部动作，舒缓循环。').replace('动作、神态与场景，表达更清楚。','100 个局部动作，舒缓循环。')
+   s=s.replace('当前提供100个带中文配字的循环GIF，提供240像素轻量版和512像素清晰版。','当前提供100个含义各异的中文GIF表情，每项2–4帧舒缓循环，含240像素轻量版和512像素清晰版。')
+   if target.name=='index.html':s=re.sub(r'src="(media/\d{3}\.gif)(?:\?v=v003)?"',r'src="\1?v=v004"',s)
+   s=s.replace('当前提供100个带中文配字的GIF表情：19个微动、81个静帧，含240像素轻量版和512像素清晰版。','当前提供100个含义各异、均有动作的中文GIF表情：每项2–4帧舒缓循环，含240像素轻量版和512像素清晰版。')
+   s=s.replace('当前100个已全部替换为 v004 版，','当前100个含义均已接入 v004 动效舒缓版，')
+   if target.name=='README.md':s=s.replace(' · [来源与许可](NOTICE.txt)',' · [v004 动效说明](docs/MOTION-V004.md) · [来源与许可](NOTICE.txt)')
   target.write_text(s)
  (D/'sitemap.xml').write_text((D/'sitemap.xml').read_text().replace('2026-10-24','2026-10-25'))
 print('Built README, 100 public GIFs in two sizes, landing page, catalog, metadata, sitemap, optional llms.txt')
